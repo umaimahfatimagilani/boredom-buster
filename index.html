@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boredom Buster</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #f0f8ff;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff69b4;
+        }
+        button {
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+        #activity {
+            margin-top: 30px;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Boredom Buster!</h1>
+    <p>Press the button to get a random fun activity suggestion!</p>
+    <button onclick="suggestActivity()">Boredom Buster</button>
+    <div id="activity"></div>
+
+    <script>
+        const activities = [
+            "Draw a picture of your favorite animal.",
+            "Read a short story.",
+            "Take a 10-minute walk outside.",
+            "Listen to a new music playlist.",
+            "Write a poem about your day.",
+            "Try a new recipe.",
+            "Do 20 jumping jacks.",
+            "Start a journal.",
+            "Learn a few phrases in a new language.",
+            "Watch a funny video on YouTube.",
+            "Do a puzzle or play a board game.",
+            "Plant a seed and watch it grow.",
+            "Try some yoga or meditation.",
+            "Create a collage from old magazines.",
+            "Write a letter to a friend."
+        ];
+
+        function suggestActivity() {
+            const randomIndex = Math.floor(Math.random() * activities.length);
+            const randomActivity = activities[randomIndex];
+            document.getElementById('activity').innerText = randomActivity;
+        }
+    </script>
+</body>
+</html>
